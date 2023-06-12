@@ -16,5 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('pasiens', [App\Http\Controllers\PasiensController::class, 'index'])->name('pasiens.index');
