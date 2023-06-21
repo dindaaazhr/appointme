@@ -6,8 +6,7 @@
 <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
 <meta name="author" content="themefisher.com">
 
-<title>Mahadi- Health & Care Medical template</title>
-
+<title>AppointMe</title>
 <!-- Favicon -->
 <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
 
@@ -32,15 +31,16 @@
 				<div class="row align-items-center">
 					<div class="col-lg-6">
 						<ul class="top-bar-info list-inline-item pl-0 mb-0">
-							<li class="list-inline-item"><a href="mailto:support@gmail.com"><i class="icofont-support-faq mr-2"></i>support@mahadidev7.com</a></li>
-							<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Address Ta-134/A, New York, USA </li>
+							<li class="list-inline-item"><a href="mailto:support@gmail.com"><i class="icofont-support-faq mr-2"></i>support@appointme.com</a></li>
+							<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Soekarno-Hatta St. 65141, Indonesia</li>
 						</ul>
 					</div>
+
 					<div class="col-lg-6">
 						<div class="text-lg-right top-right-bar mt-2 mt-lg-0">
 							<a href="tel:+23-345-67890" >
 								<span>Call Now : </span>
-								<span class="h4">823-4565-13456</span>
+								<span class="h4">(0341)574006</span>
 							</a>
 						</div>
 					</div>
@@ -49,10 +49,10 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navigation" id="navbar">
 			<div class="container">
-				<a class="navbar-brand" href="index.html">
+				<a class="navbar-brand" href="{{ route('pasiens.home') }}">
 					<img src="images/logo.png" alt="" class="img-fluid">
 				</a>
-	
+
 				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="icofont-navigation-menu"></span>
 			</button>
@@ -60,37 +60,18 @@
 			<div class="collapse navbar-collapse" id="navbarmain">
 				<ul class="navbar-nav ml-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="index.html">Home</a>
+					<a class="nav-link" href="{{ route('pasiens.home') }}" style="scroll-behavior: smooth;">Beranda</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-	
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="department.html" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Department <i class="icofont-thin-down"></i></a>
-						<ul class="dropdown-menu" aria-labelledby="dropdown02">
-							<li><a class="dropdown-item" href="department.html">Departments</a></li>
-							<li><a class="dropdown-item" href="department-single.html">Department Single</a></li>
-						</ul>
-					</li>
-	
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="doctor.html" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Doctors <i class="icofont-thin-down"></i></a>
-						<ul class="dropdown-menu" aria-labelledby="dropdown03">
-							<li><a class="dropdown-item" href="doctor.html">Doctors</a></li>
-							<li><a class="dropdown-item" href="doctor-single.html">Doctor Single</a></li>
-							<li><a class="dropdown-item" href="appoinment.html">Appoinment</a></li>
-						</ul>
-					</li>
-	
+				<li class="nav-item"><a class="nav-link" href="{{ route('pasiens.poli') }}">Poli</a></li>
 				<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="blog-sidebar.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog <i class="icofont-thin-down"></i></a>
-						<ul class="dropdown-menu" aria-labelledby="dropdown05">
-							<li><a class="dropdown-item" href="blog-sidebar.html">Blog with Sidebar</a></li>
-	
-							<li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
-						</ul>
-					</li>
-				<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+					<a class="nav-link dropdown-toggle" href="doctor.html" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dokter<i class="icofont-thin-down"></i></a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown03">
+						<li><a class="dropdown-item" href="{{ route('pasiens.doctor') }}">Dokter</a></li>
+						<li><a class="dropdown-item" href="{{ route('pasiens.janji') }}">Buat Janji</a></li>
+					</ul>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="{{route('pasiens.profil')}}">Profil</a></li>
+				<li class="nav-item"><a class="nav-link" href="{{route('pasiens.kontak')}}">Kontak</a></li>
 				</ul>
 			</div>
 			</div>
@@ -105,128 +86,53 @@
 	<div class="row">
 	<div class="col-md-12">
 		<div class="block text-center">
-		<span class="text-white">Our services</span>
-		<h1 class="text-capitalize mb-5 text-lg">What We Do</h1>
-
+		<span class="text-white">Kontak</span>
+		<h1 class="text-capitalize mb-5 text-lg">Hubungi kami</h1>
 		</div>
 	</div>
 	</div>
+
 	<div class="row">
 		<div class="col-12">
 			<div class="pagination_link">
-				<a href="./" class="text-white">Home</a>
+				<a href="{{ route('pasiens.home') }}" class="text-white">Beranda</a>
 				<span>/</span>
-				<a href="./service.html" class="text-white-50">Service</a>
+				<a href="{{ route('pasiens.kontak') }}" class="text-white-50">Kontak</a>
 			</div>
 		</div>
 	</div>
 </div>
 </section>
+<!-- contact form start -->
 
-
-<section class="section service-2">
+<section class="section contact-info pb-0">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-block mb-5">
-					<img src="images/service/service-1.jpg" alt="" class="img-fluid">
-					<div class="content">
-						<a href="./department-single.html">
-							<h4 class="mt-4 mb-2 title-color">Child care</h4>
-						</a>
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque...</p>
-						<a href="./department-single.html">Read More</a>
-					</div>
+			<div class="col-lg-4 col-sm-6 col-md-6">
+				<div class="contact-block mb-4 mb-lg-0">
+					<i class="icofont-live-support"></i>
+					<h5>Telepon</h5>
+					+823-4565-13456
 				</div>
 			</div>
-
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-block mb-5">
-					<img src="images/service/service-2.jpg" alt="" class="img-fluid">
-					<div class="content">
-						<a href="/department-single.html">
-							<h4 class="mt-4 mb-2  title-color">Personal Care</h4>
-						</a>
-						
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-						<a href="./department-single.html">Read More</a>
-					</div>
+			<div class="col-lg-4 col-sm-6 col-md-6">
+				<div class="contact-block mb-4 mb-lg-0">
+					<i class="icofont-support-faq"></i>
+					<h5>Email</h5>
+					hubungikami@appointme.com
 				</div>
 			</div>
-			
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-block mb-5">
-					<img src="images/service/service-3.jpg" alt="" class="img-fluid">
-					<div class="content">
-						<a href="/department-single.html">
-							<h4 class="mt-4 mb-2 title-color">CT scan</h4>
-						</a>
-						
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-						<a href="./department-single.html">Read More</a>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-block mb-5 mb-lg-0">
-					<img src="images/service/service-4.jpg" alt="" class="img-fluid">
-					<div class="content">
-						<a href="/department-single.html">
-							<h4 class="mt-4 mb-2 title-color">Joint replacement</h4>
-						</a>
-						
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-						<a href="./department-single.html">Read More</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-block mb-5 mb-lg-0">
-					<img src="images/service/service-6.jpg" alt="" class="img-fluid">
-					<div class="content">
-						<a href="/department-single.html">
-							<h4 class="mt-4 mb-2 title-color">Examination & Diagnosis</h4>
-						</a>
-						
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-						<a href="./department-single.html">Read More</a>
-					</div>
-				</div>
-			</div>
-			
-			<div class="col-lg-4 col-md-6 col-sm-6">
-				<div class="service-block mb-5 mb-lg-0">
-					<img src="images/service/service-8.jpg" alt="" class="img-fluid">
-					<div class="content">
-						<a href="/department-single.html">
-							<h4 class="mt-4 mb-2 title-color">Alzheimer's disease</h4>
-						</a>
-						
-						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
-						<a href="./department-single.html">Read More</a>
-					</div>
+			<div class="col-lg-4 col-sm-6 col-md-6">
+				<div class="contact-block mb-4 mb-lg-0">
+					<i class="icofont-location-pin"></i>
+					<h5>Lokasi</h5>
+					Jalan Soekarno F27, Bandung, Ind
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="section cta-page">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-7">
-				<div class="cta-content">
-					<div class="divider mb-4"></div>
-					<h2 class="mb-5 text-lg">We are pleased to offer you the <span class="title-color">chance to have the healthy</span></h2>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A tempora voluptatibus libero saepe, illum necessitatibus. Facere est fugiat sapiente recusandae sunt, illum sed excepturi quaerat tempore architecto, numquam praesentium pariatur.</p>
-					<a href="appoinment.html" class="btn btn-main-2 btn-round-full">Get appoinment<i class="icofont-simple-right  ml-2"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+
 
 <!-- footer Start -->
 <footer class="footer section gray-bg">
@@ -237,7 +143,7 @@
 					<div class="logo mb-4">
 						<img src="images/logo.png" alt="" class="img-fluid">
 					</div>
-					<p>Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati tenetur veritatis eveniet distinctio possimus.</p>
+					<p>Kami memahami betapa berharganya waktu Anda dan kami berkomitmen untuk menyediakan pengalaman antrian yang efisien dan nyaman bagi Anda.</p>
 
 					<ul class="list-inline footer-socials mt-4">
 						<li class="list-inline-item"><a href="https://www.facebook.com/themefisher"><i class="icofont-facebook"></i></a></li>
@@ -249,15 +155,15 @@
 
 			<div class="col-lg-2 col-md-6 col-sm-6">
 				<div class="widget mb-5 mb-lg-0">
-					<h4 class="text-capitalize mb-3">Department</h4>
+					<h4 class="text-capitalize mb-3">Poli</h4>
 					<div class="divider mb-4"></div>
 
 					<ul class="list-unstyled footer-menu lh-35">
-						<li><a href="#">Surgery </a></li>
-						<li><a href="#">Wome's Health</a></li>
-						<li><a href="#">Radiology</a></li>
-						<li><a href="#">Cardioc</a></li>
-						<li><a href="#">Medicine</a></li>
+						<li><a href="#">ANAK DAN TUMBUH KEMBANG </a></li>
+						<li><a href="#">MATA</a></li>
+						<li><a href="#">PENYAKIT DALAM</a></li>
+						<li><a href="#">OBGYN</a></li>
+						<li><a href="#">BEDAH</a></li>
 					</ul>
 				</div>
 			</div>
@@ -279,21 +185,21 @@
 
 			<div class="col-lg-3 col-md-6 col-sm-6">
 				<div class="widget widget-contact mb-5 mb-lg-0">
-					<h4 class="text-capitalize mb-3">Get in Touch</h4>
+					<h4 class="text-capitalize mb-3">Hubungi kami</h4>
 					<div class="divider mb-4"></div>
 
 					<div class="footer-contact-block mb-4">
 						<div class="icon d-flex align-items-center">
 							<i class="icofont-email mr-3"></i>
-							<span class="h6 mb-0">Support Available for 24/7</span>
+							<span class="h6 mb-0">Layanan 24 jam</span>
 						</div>
-						<h4 class="mt-2"><a href="tel:+23-345-67890">Support@email.com</a></h4>
+						<h4 class="mt-2"><a href="tel:+23-345-67890">hubungikami@appointme.com</a></h4>
 					</div>
 
 					<div class="footer-contact-block">
 						<div class="icon d-flex align-items-center">
 							<i class="icofont-support mr-3"></i>
-							<span class="h6 mb-0">Mon to Fri : 08:30 - 18:00</span>
+							<span class="h6 mb-0">Senin - Jumat : 08:30 - 18:00</span>
 						</div>
 						<h4 class="mt-2"><a href="tel:+23-345-67890">+23-456-6588</a></h4>
 					</div>
@@ -305,7 +211,7 @@
 			<div class="row align-items-center justify-content-between">
 				<div class="col-lg-6">
 					<div class="copyright">
-						&copy; Create by <a href="https://github.com/mahadidev7?tab=repositories" target="_blank">mahadidev7</a>
+						&copy; Create by <br> ADINDA FATIMAH AZ-ZAHRA 2151502011110XX<br> AMIRA GHINA NURFANSEPTA 2151502011110XX <br> TSABITA MUTHIA AYU PRAMESTI 21515020111070 <a href="https://github.com/mahadidev7?tab=repositories" target="_blank"></a>
 					</div>
 				</div>
 				<div class="col-lg-6">

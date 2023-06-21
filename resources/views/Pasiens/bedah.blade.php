@@ -5,7 +5,7 @@
 <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
 <meta name="author" content="themefisher.com">
 
-	<title>Mahadi- Health & Care Medical template</title>
+<title>Mahadi- Health & Care Medical template</title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
@@ -24,7 +24,6 @@
 </head>
 
 <body id="top">
-
 	<header>
 		<div class="header-top-bar">
 			<div class="container">
@@ -60,7 +59,7 @@
 			<div class="collapse navbar-collapse" id="navbarmain">
 				<ul class="navbar-nav ml-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="{{ route('pasiens.home') }}" style="scroll-behavior: smooth;">Beranda</a>
+					<a class="nav-link" href="{{route('pasiens.home')}}" style="scroll-behavior: smooth;">Beranda</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="{{ route('pasiens.poli') }}">Poli</a></li>
 				<li class="nav-item dropdown">
@@ -86,8 +85,8 @@
 	<div class="row">
 	<div class="col-md-12">
 		<div class="block text-center">
-		<span class="text-white">Buat janji</span>
-		<h1 class="text-capitalize mb-5 text-lg">Pendaftaran Antrian</h1>
+		<span class="text-white">Detail Poli</span>
+		<h1 class="text-capitalize mb-5 text-lg">POLI BEDAH</h1>
 		</div>
 	</div>
 	</div>
@@ -96,72 +95,78 @@
 			<div class="pagination_link">
 				<a href="{{ route('pasiens.home') }}" class="text-white" >Beranda</a>
 				<span>/</span>
-				<a href="{{ route('pasiens.janji') }}" class="text-white-50">Buat janji</a>
+				<a href="{{ route('pasiens.bedah') }}" class="text-white-50">Penyakit bedah</a>
 			</div>
 		</div>
 	</div>
 </div>
 </section>
 
-<section class="appoinment section">
-<div class="container">
-	<div class="row">
-	<div class="col-lg-4">
-		<div class="mt-3">
-			<div class="feature-icon mb-3">
-			<i class="icofont-support text-lg"></i>
-			</div>
-			<span class="h3">Hubungi untuk kasus Darurat</span>
-			<h2 class="text-color mt-3">
-				<a href="tel:+84 789 1256 "> (0341) 574006 </a>
-			</h2>
-		</div>
-	</div>
 
-	<div class="col-lg-8">
-		<div class="appoinment-wrap mt-5 mt-lg-0 pl-lg-5">
-			<h2 class="mb-2 title-color">Buat Janji</h2>
-			<p class="mb-4">Silahkan membuat janji dengan dokter anda berdasarkan poli dan pilihlah dokter pada kolom yang telah disediakan. Pastika data diri anda sesuai!.</p>
-			<form id="#" class="appoinment-form" method="post" action="{{ route('antreans.store') }}">
-				@csrf
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="form-group">
-							<label for="id_dokter">Nama Dokter:</label>
-							<select name="id_dokter" id="idDokterDropdown" class="form-control">
-								@forelse($dokters as $dokter) 
-								<option value="{{ $dokter->id_dokter }}">{{ $dokter->nama }}</option>
-								@empty
-								<option value="">Belum ada Antrean.</option>
-								@endforelse
-							</select>
-						</div>
-					</div>
-					<div class="col-lg-12">
-						<div class="form-group">
-							<label for="id_pasien">ID Anda:</label>
-							<input name="id_pasien" id="id_pasien" type="number" class="form-control" value="{{ Auth::user()->id_pasien }}" readonly>
-						</div>
-					</div>
-					<div class="col-lg-12">
-						<div class="form-group">
-							<label for="id_pasien">Jam Temu:</label>
-							<input name="jam_temu" id="jam_temu" type="time" class="form-control" placeholder="Jam Temu">
-						</div>
-					</div>
-					<input type="hidden" id="status" name="status" value="Belum Selesai">
-					<div class="col-lg-12">
-						<button type="submit" class="btn btn-main btn-round-full" style="margin-top: 30px;">Buat Janji<i class="icofont-simple-right ml-2"></i></button>
+<section class="section department-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="department-img">
+					<img src="images/service/bg-1.jpg" alt="" class="img-fluid rounded">
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="department-content mt-5">
+					<h3 class="text-md">Selamat datang di Poli Bedah Kami!</h3>
+					<div class="divider my-4"></div>
+					<p class="lead">Poli Bedah adalah fasilitas medis yang menangani berbagai jenis prosedur bedah yang berkaitan dengan berbagai sistem tubuh.</p>
+					<p>Poli Bedah menyediakan konsultasi dengan dokter spesialis bedah untuk mengevaluasi kondisi medis Anda. Mereka akan meninjau riwayat medis Anda, melakukan pemeriksaan fisik, dan mungkin memerintahkan tes tambahan untuk membuat diagnosis yang akurat.</p>
+
+
+					<h3 class="mt-5 mb-4">Layanan Poli</h3>
+					<div class="divider my-4"></div>
+					<ul class="list-unstyled department-service">
+						<li><i class="icofont-check mr-2"></i>Konsultasi dan Evaluasi</li>
+						<li><i class="icofont-check mr-2"></i>Persiapan Pra-Bedah</li>
+						<li><i class="icofont-check mr-2"></i>Operasi Rutin</li>
+						<li><i class="icofont-check mr-2"></i>Operasi Minor</li>
+						<li><i class="icofont-check mr-2"></i>Prosedur Endoskopi</li>
+						<li><i class="icofont-check mr-2"></i>Perawatan Pascabedah</li>
+					</ul>
+
+					<a href="{{ route('pasiens.janji') }}" class="btn btn-main-2 btn-round-full">Buat Janji<i class="icofont-simple-right ml-2  "></i></a>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="sidebar-widget schedule-widget mt-5 ">
+					<h5 class="mb-4">Jam Buka Poli</h5>
+
+					<ul class="list-unstyled">
+					<li class="d-flex justify-content-between align-items-center">
+						<a href="#">Senin - Jumat</a>
+						<span>9:00 - 17:00</span>
+					</li>
+					<li class="d-flex justify-content-between align-items-center">
+						<a href="#">Sabtu</a>
+						<span>9:00 - 16:00</span>
+					</li>
+					<li class="d-flex justify-content-between align-items-center">
+						<a href="#">Minggu</a>
+						<span>Tutup</span>
+					</li>
+					</ul>
+
+					<div class="sidebar-contatct-info mt-4">
+						<p class="mb-0">Darurat</p>
+						<a href="tel:4565">
+							<h3>+6289-4565-65768</h3>
+						</a>
 					</div>
 				</div>
-			</form>
 			</div>
 		</div>
 	</div>
-	</div>
-</div>
 </section>
-
 
 <!-- footer Start -->
 <footer class="footer section gray-bg">

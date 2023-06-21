@@ -1,4 +1,5 @@
 @include('guest')
+@include('pasiens')
 <!DOCTYPE html>
 <html lang="en">
 <head>

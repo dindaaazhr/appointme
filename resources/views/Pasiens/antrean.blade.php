@@ -61,7 +61,7 @@
 				<div class="collapse navbar-collapse" id="navbarmain">
 					<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="#beranda" style="scroll-behavior: smooth;">Beranda</a>
+						<a class="nav-link" href="{{route('pasiens.home')}}" style="scroll-behavior: smooth;">Beranda</a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="{{route('pasiens.poli')}}">Poli</a></li>
 					<li class="nav-item dropdown">
@@ -78,7 +78,7 @@
 				</div>
 			</nav>
 		</header>
-            
+----------------------------------------------
 
 
         <section class="page-title bg-1">
