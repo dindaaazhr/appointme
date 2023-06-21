@@ -5,10 +5,11 @@
 <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
 <meta name="author" content="themefisher.com">
 
-	<title>Mahadi- Health & Care Medical template</title>
+<title>AppointMe</title>
 
 <!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="images/logo-icon.png" />
+
 
 <!-- bootstrap.min css -->
 <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
@@ -149,7 +150,7 @@
 							<input name="jam_temu" id="jam_temu" type="time" class="form-control" placeholder="Jam Temu">
 						</div>
 					</div>
-					<input type="hidden" id="status" name="status" value="Belum Selesai">
+					<input type="hidden" id="status" name="status" value="Dalam Antrean">
 					<div class="col-lg-12">
 						<button type="submit" class="btn btn-main btn-round-full" style="margin-top: 30px;">Buat Janji<i class="icofont-simple-right ml-2"></i></button>
 					</div>

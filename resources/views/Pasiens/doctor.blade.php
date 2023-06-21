@@ -6,10 +6,11 @@
     <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
     <meta name="author" content="themefisher.com">
 
-    <title>AppointMe</title>
+	<title>AppointMe</title>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo-icon.png" />
+
 
     <!-- bootstrap.min css -->
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
@@ -120,11 +121,8 @@
 
             <div class="col-12 text-center  mb-5">
                     <div class="btn-group btn-group-toggle " data-toggle="buttons">
-                    <label class="btn active ">
-                        <input type="radio" name="shuffle-filter" value="all" checked="checked" />Semua Poli
-                    </label>
                     <label class="btn ">
-                        <input type="radio" name="shuffle-filter" value="cat1" />Kardiologi
+                        <input type="radio" name="shuffle-filter" value="cat1" />Obgyn
                     </label>
                     <label class="btn">
                         <input type="radio" name="shuffle-filter" value="cat2" />Gigi
@@ -139,7 +137,7 @@
                         <input type="radio" name="shuffle-filter" value="cat5" />Anak
                     </label>
                     <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat6" />Traumatologi
+                        <input type="radio" name="shuffle-filter" value="cat6" />Penyakit Dalam
                     </label>
                     </div>
             </div>
@@ -147,9 +145,10 @@
             <table class="table">
             <thead>
                 <tr>
-                    <th>ID Pasien</th>
-                    <th>Email</th>
-                    <th>Nama</th>
+                    <th>ID Dokter</th>
+                    <th>Nama Dokter</th>
+                    <th>Nama Poli</th>
+                    <th>No Hp</th>
                     <th>Alamat</th>
                     <th>Jam Buka</th>
                     <th>Jam Tutup</th>
@@ -160,6 +159,7 @@
                 <tr>
                     <td>{{ $dokter->id_dokter }}</td>
                     <td>{{ $dokter->nama }}</td>
+                    <td>{{ $dokter->polis ? $dokter->polis->nama : '-' }}</td>
                     <td>{{ $dokter->no_hp }}</td>
                     <td>{{ $dokter->alamat }}</td>
                     <td>{{ $dokter->jam_buka }}</td>

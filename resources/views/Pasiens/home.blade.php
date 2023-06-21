@@ -98,7 +98,7 @@
 	</div>
 </section>
 
-<section class="features">
+<section id="beranda" class="features">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">

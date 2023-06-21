@@ -6,10 +6,11 @@
     <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
     <meta name="author" content="themefisher.com">
 
-    <title>AppointMe</title>
+	<title>AppointMe</title>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo-icon.png" />
+
 
     <!-- bootstrap.min css -->
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
@@ -78,7 +79,6 @@
 				</div>
 			</nav>
 		</header>
-----------------------------------------------
 
 
         <section class="page-title bg-1">
@@ -145,16 +145,19 @@
             </thead>
             <tbody>
                 @foreach ($antreans as $antrean)
-                <tr>
-                    <td>{{ $antrean->id_antrean }}</td>
-                    <td>{{ $antrean->id_dokter }}</td>
-                    <td>{{ $antrean->dokters ? $antrean->dokters->nama : '-' }}</td>
-                    <td>{{ $antrean->polis ? $antrean->polis->nama : '-' }}</td>
-                    <td>{{ $antrean->jam_temu }}</td>
-                    <td>{{ $antrean->status }}</td>
-                </tr>
+                    @if ($antrean->id_pasien == Auth::user()->id_pasien)
+                        <tr>
+                            <td>{{ $antrean->id_antrean }}</td>
+                            <td>{{ $antrean->id_dokter }}</td>
+                            <td>{{ $antrean->dokters ? $antrean->dokters->nama : '-' }}</td>
+                            <td>{{ $antrean->dokters ? $antrean->dokters->polis->nama : '-' }}</td>
+                            <td>{{ $antrean->jam_temu }}</td>
+                            <td>{{ $antrean->status }}</td>
+                        </tr>
+                    @endif
                 @endforeach
             </tbody>
+
         </table>
 
         </section>

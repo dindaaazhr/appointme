@@ -39,8 +39,8 @@
 <body>
     <div class="container">
         <h1>404 - Page Not Found</h1>
-        <p>The page you are looking for does not exist.</p>
-        <p>Please check the URL or go back to the <a href="{{ route('pasiens.home') }}">home page</a>.</p>
+        <p>Halaman yang Anda cari tidak ditemukan.</p>
+        <p>Cek kembali laman URL atau kembali ke <a href="{{ route('pasiens.home') }}">Beranda AppointMe</a>.</p>
     </div>
 </body>
 </html>
