@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('dokters', function (Blueprint $table) {
             $table->increments('id_dokter');
+            
             $table->unsignedInteger('id_poli')->length(10);
             $table->foreign('id_poli')->references('id_poli')->on('polis');
+
             $table->string('nama');
             $table->string('no_hp');
             $table->string('alamat');
