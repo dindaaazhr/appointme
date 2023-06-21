@@ -10,7 +10,8 @@ class DoktersController extends Controller
 {
     public function index() {
         $dokters = Dokter::all();
-        return view('pasiens.doctor')->with('dokters', $dokters);
+        $polis = Poli::all();
+        return view('pasiens.doctor')->with('dokters', $dokters)->with('polis', $polis);
     }
 
     public function detail($id_poli) {
