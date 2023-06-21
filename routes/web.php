@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\AntreansController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PasiensController;
 use App\Http\Controllers\DoktersController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AntreansController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +35,29 @@ Route::get('polis', function () {
     return view('pasiens.poli');
 })-> name('pasiens.poli');
 
+Route::get('anak', function () {
+    return view('pasiens.anak');
+})-> name('pasiens.anak');
 
+Route::get('bedah', function () {
+    return view('pasiens.bedah');
+})-> name('pasiens.bedah');
+
+Route::get('dalam', function () {
+    return view('pasiens.dalam');
+})-> name('pasiens.dalam');
+
+Route::get('mata', function () {
+    return view('pasiens.mata');
+})-> name('pasiens.mata');
+
+Route::get('obgyn', function () {
+    return view('pasiens.obgyn');
+})-> name('pasiens.obgyn');
+
+Route::get('saraf', function () {
+    return view('pasiens.saraf');
+})-> name('pasiens.saraf');
 
 Route::get('kontaks', function () {
     return view('pasiens.kontak');
@@ -44,6 +66,11 @@ Route::get('kontaks', function () {
 Route::get('antreans', function () {
     return view('pasiens.antreans');
 })->name('pasiens.antreans');
+
+Route::get('404', function () {
+    return view('pasiens.error');
+})->name('error.404');
+
 
 #pasien
 Route::get('register', [UserController::class, 'register'])->name('register');
@@ -74,7 +101,7 @@ Route::post('/antreans', [AntreansController::class, 'store'])->name('antreans.s
 Route::get('janjis', [AntreansController::class, 'detail'])->name('pasiens.janji');
 
 
-# -------------------------------------------------------------------------- Admin ---------------------------------------------------
+# ------------------------------------------------------------- Admin ------------------------------------------------------------------------------
 
 Route::get('dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index');
 
