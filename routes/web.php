@@ -17,7 +17,7 @@ use App\Http\Controllers\AntreansController;
 |
 */
 
-
+# buat tes
 Route::get('/appointme', function () {
     return view('appointme');
 })->name('appointme');
@@ -26,6 +26,7 @@ Route::get('/home', function () {
     return view('home.index');
 });
 
+# waktu halaman 128...
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -73,6 +74,7 @@ Route::get('antreans', function () {
 Route::get('404', function () {
     return view('pasiens.error');
 })->name('error.404');
+
 
 # ------------------------------------------------------------- CRUD Pasien ------------------------------------------------------------------------------
 
