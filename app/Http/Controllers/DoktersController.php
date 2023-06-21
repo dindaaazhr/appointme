@@ -8,7 +8,6 @@ use App\Models\Poli;
 
 class DoktersController extends Controller
 {
-    //
     public function index() {
         $dokters = Dokter::all();
         return view('pasiens.doctor')->with('dokters', $dokters);

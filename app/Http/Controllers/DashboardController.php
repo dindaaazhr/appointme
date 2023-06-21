@@ -7,7 +7,6 @@ use App\Models\Pasien;
 use App\Models\Dokter;
 use App\Models\Poli;
 use App\Models\Antrean;
-use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {

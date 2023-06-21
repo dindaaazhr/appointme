@@ -24,9 +24,7 @@ class AntreanController extends Controller
             'jam_temu' => 'required',
             'status' => 'required',
         ]);
-
         Antrean::create($data);
-
         return redirect()->route('antrean.index')->with('success', 'Data antrean berhasil ditambahkan.');
     }
 

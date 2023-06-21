@@ -15,14 +15,12 @@ class PasiensController extends Controller
         return view('pasiens.profil')->with('pasiens', $pasiens);
     }
 
-    
-        // Mengubah data pasien update.blade.php
         public function edit($id_pasien)
         {
             $pasien = Pasien::find($id_pasien);
             return view('pasiens.profil')->with('pasien', $pasien);
         }
-    
+
         public function update(Request $request, $id_pasien)
         {
             $request->validate([
@@ -40,7 +38,6 @@ class PasiensController extends Controller
             $pasien->tanggal_lahir = $request->input('tanggal_lahir');
             $pasien->alamat = $request->input('alamat');
             $pasien->save();
-        
             return redirect()->route('pasiens.profil')->with('success', 'Data pasien berhasil diubah.');
         }        
 

@@ -11,7 +11,7 @@ class AntreansController extends Controller
     //
     public function index() {
         $antreans = Antrean::all();
-        return view('pasiens.antreans', compact('antreans'));
+        return view('pasiens.antrean', compact('antreans'));
     }
 
     public function detail() {

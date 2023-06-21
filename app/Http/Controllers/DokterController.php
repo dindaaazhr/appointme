@@ -13,7 +13,7 @@ class DokterController extends Controller
         $dokters = Dokter::all();
         $polis = Poli::all();
         $jumlahAntrean = [];
-
+        
         foreach ($dokters as $dokter) {
             $jumlahAntrean[$dokter->id_dokter] = $dokter->antreans->count();
         }
@@ -29,9 +29,7 @@ class DokterController extends Controller
             'jam_buka' => 'required',
             'jam_tutup' => 'required',
         ]);
-
         Dokter::create($data);
-
         return redirect()->route('dokter.index')->with('success', 'Data dokter berhasil ditambahkan.');
     }
 

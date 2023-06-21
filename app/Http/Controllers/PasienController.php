@@ -24,10 +24,8 @@ class PasienController extends Controller
             'tanggal_lahir' => 'required|date',
             'alamat' => 'required',
         ]);
-
         $data['password'] = Hash::make($data['password']);
         Pasien::create($data);
-
         return redirect()->route('pasien.index')->with('success', 'Data pasien berhasil ditambahkan.');
     }
 
