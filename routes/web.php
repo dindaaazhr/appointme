@@ -74,6 +74,7 @@ Route::get('404', function () {
     return view('pasiens.error');
 })->name('error.404');
 
+# ------------------------------------------------------------- CRUD Pasien ------------------------------------------------------------------------------
 
 #pasien
 Route::get('register', [UserController::class, 'register'])->name('register');
@@ -104,7 +105,7 @@ Route::post('/antreans', [AntreansController::class, 'store'])->name('antreans.s
 Route::get('janjis', [AntreansController::class, 'detail'])->name('pasiens.janji');
 
 
-# ------------------------------------------------------------- Admin ------------------------------------------------------------------------------
+# ------------------------------------------------------------- CRUD Admin ------------------------------------------------------------------------------
 
 Route::get('dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index');
 
