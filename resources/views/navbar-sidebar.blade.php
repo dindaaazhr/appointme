@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-    <link rel="icon" href="https://i.ibb.co/QD3VchQ/logo-icon.png">
 	<title>Admin AppointMe</title>
 	<link rel="stylesheet" href="styles.css">
 	<script src="https://kit.fontawesome.com/38bf3acd15.js" crossorigin="anonymous"></script>
@@ -282,6 +281,7 @@
             text-overflow: ellipsis;
         }
     </style>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo-icon.png" />
 </head>
 <body>
 <div class="wrapper" id="wrap">
