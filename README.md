@@ -10,7 +10,7 @@
 ## Tugas Akhir Pemrograman Website
 Nama Website : AppointMe
 
-AppointMe adalah sebuah website yang dirancang khusus untuk membantu pengguna dalam mengatur dan mengelola antrian pasien di sebuah praktik dokter. Website ini memberikan kemudahan bagi pengguna untuk membuat janji temu dengan dokter secara online, menghindari antrean yang panjang dan waktu yang terbuang. Website ini dirancang untuk dua peran utama, yaitu Admin dan Pasien, dengan fitur-fitur yang disesuaikan untuk masing-masing peran.
+AppointMe adalah sebuah website yang dirancang khusus untuk membantu pengguna dalam mengatur dan mengelola antrian pasien di sebuah rumah sakit. Website ini memberikan kemudahan bagi pengguna untuk membuat janji temu dengan dokter secara online, menghindari antrean yang panjang dan waktu yang terbuang. Website ini dirancang untuk dua peran utama, yaitu Admin dan Pasien, dengan fitur-fitur yang disesuaikan untuk masing-masing peran.
 
 ### 1. Role Pasien:
 ![ss beranda](https://github.com/tsabitamuthia/appointme/assets/97678433/cd32cb33-4a55-4afb-a344-06cd479673ab)
