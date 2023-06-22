@@ -7,46 +7,29 @@
 2. Amira Ghina Nurfansepta     -   [215150201111026]
 3. Tsabita Muthia Ayu Pramesti -   [215150201111070]
 
-## Learning Laravel
+## Tugas Akhir Pemrograman Website
+Nama Website : AppointMe
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+AppointMe adalah sebuah website yang dirancang khusus untuk membantu pengguna dalam mengatur dan mengelola antrian pasien di sebuah praktik dokter. Website ini memberikan kemudahan bagi pengguna untuk membuat janji temu dengan dokter secara online, menghindari antrean yang panjang dan waktu yang terbuang.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Website ini dirancang untuk dua peran utama, yaitu Admin dan Pasien, dengan fitur-fitur yang disesuaikan untuk masing-masing peran.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 1. Role Admin:
+Sebagai admin di AppointMe, Anda memiliki akses penuh untuk mengelola sistem antrian dan tabel data yang terkait. Berikut adalah fitur-fitur yang tersedia untuk Anda:
+- Login: Fitur Login pada admin memungkinkan admin untuk langsung tertuju ke halaman dashboard dengan menu jumlah antrean, jumlah pasien, jumlah dokter, dan jumlah poli.
+- Manajemen Tabel Pasien: Anda dapat melakukan operasi CRUD (Create, Read, Update, Delete) terhadap data pasien. Anda dapat menambahkan pasien baru, melihat daftar pasien, mengubah informasi pasien, dan menghapus data pasien jika diperlukan.
+- Manajemen Tabel Dokter: Anda dapat mengelola data dokter yang terdaftar di rumah sakit. Fitur ini memungkinkan Anda untuk menambahkan dokter baru, melihat daftar dokter beserta informasi spesialisasi dan jadwal kerja, mengubah informasi dokter, dan menghapus data dokter jika diperlukan.
+- Manajemen Tabel Poli: Anda dapat mengelola daftar poli yang tersedia di rumah sakit. Fitur ini memungkinkan Anda untuk menambahkan poli baru, melihat daftar poli yang tersedia, mengubah informasi poli, dan menghapus data poli jika diperlukan.
+- Laporan dan Statistik: Anda dapat menghasilkan laporan dan statistik terkait jumlah antrean, jumlah pasien, jumlah dokter, dan jumlah poli.
 
-## Laravel Sponsors
+### 1. Role Pasien:
+Sebagai pasien di AppointMe, Anda memiliki akses untuk melakukan pendaftaran antrian dokter, melihat daftar dokter, riwayat antrian, dan daftar poli yang tersedia. Berikut adalah fitur-fitur yang tersedia untuk Anda:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- Registrasi Pasien: Fitur registrasi pada website AppointMe memungkinkan calon pasien untuk membuat akun baru. 
+- Login Pasien: Fitur login pada website AppointMe memungkinkan pasien yang telah terdaftar untuk masuk ke akun pribadinya dan tertuju ke halaman beranda yang berisi informasi umum dari website AppointMe. Pasien dapat mengakses semua halaman apabila telah melakukan login terlebih dahulu.
+- Pendaftaran Antrian Dokter: Anda dapat melakukan pendaftaran antrian dokter secara online. Fitur ini memungkinkan Anda untuk memilih dokter yang diinginkan, melihat jadwal ketersediaan, dan memilih waktu kunjungan yang sesuai.
+- Daftar Dokter: Anda dapat melihat daftar dokter yang tersedia di rumah sakit. Fitur ini memberikan informasi tentang spesialisasi dokter, jadwal kerja, dan informasi profil lainnya.
+- Riwayat Antrian: Anda dapat melihat riwayat antrian Anda, termasuk detail janji temu sebelumnya, status antrian (sedang diperiksa, selesai, dll.), dan catatan medis yang relevan. Hal ini memudahkan Anda dalam mengakses informasi kunjungan sebelumnya.
+- Daftar Poli: Anda dapat melihat daftar poli yang tersedia di rumah sakit. Fitur ini memberikan informasi tentang poli spesifik, jadwal ketersediaan, dan dokter yang terkait dengan poli tersebut.
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+AppointMe membantu mempercepat dan mengoptimalkan proses pendaftaran dan manajemen antrian di rumah sakit. Dengan fitur-fitur yang disesuaikan untuk admin dan pasien, website ini memudahkan koordinasi antara rumah sakit, dokter, dan pasien untuk memastikan pengalaman yang lancar dan efisien dalam perawatan medis.
