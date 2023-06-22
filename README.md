@@ -16,6 +16,7 @@ Website ini dirancang untuk dua peran utama, yaitu Admin dan Pasien, dengan fitu
 
 ### 1. Role Pasien:
 <link rel="shortcut icon" type="image/x-icon" href="\images\beranda.png" />
+<img src="\images\beranda.png" alt="">
 Sebagai pasien di AppointMe, Anda memiliki akses untuk melakukan pendaftaran antrian dokter, melihat daftar dokter, riwayat antrian, dan daftar poli yang tersedia. Berikut adalah fitur-fitur yang tersedia untuk Anda:
 
 - Registrasi Pasien: Fitur registrasi pada website AppointMe memungkinkan calon pasien untuk membuat akun baru. 
