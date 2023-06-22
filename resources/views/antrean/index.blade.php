@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo-icon.png" />
 </head>
 <body>
 
@@ -20,6 +21,7 @@
             <h1>Data Antrean</h1>
         <br>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahModal">
+                <link rel="shortcut icon" type="image/x-icon" href="images/logo-icon.png" />
                 + Antrean
             </button>
             <table class="table mt-3">
