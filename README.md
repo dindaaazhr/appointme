@@ -55,3 +55,12 @@ AppointMe membantu mempercepat dan mengoptimalkan proses pendaftaran dan manajem
 **2. Detail Pasien**
 ![detail](https://github.com/tsabitamuthia/appointme/assets/97678433/f9408b9c-93aa-4cab-8ca6-7ac60b458536)
 
+## Installation
+- `git clone`
+- `cd .../appointme`
+- `composer install`
+- `cp .env.example .env`
+- Ubah ke `.env`
+- php artisan key:generate
+- Buat database `appointme` di PHP MyAdmin
+- php artisan migrate
