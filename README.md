@@ -57,8 +57,7 @@ AppointMe membantu mempercepat dan mengoptimalkan proses pendaftaran dan manajem
 
 
 **2. Detail Pasien**
-![detail](https://github.com/tsabitamuthia/appointme/assets/97678433/0a6ab8f4-a8aa-400b-b7b7-2c1f8f66f403)
-
+![detail](https://github.com/tsabitamuthia/appointme/assets/97678433/fc386930-dddb-4be9-b2ce-7070d9606d30)
 
 ## Installation
 - `git clone <URL HTTPS Github>`
