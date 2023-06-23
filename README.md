@@ -1,4 +1,4 @@
-![login](https://github.com/tsabitamuthia/appointme/assets/97678433/b1182a65-6a48-458b-8c1a-668e8622454b)<h1>Hospital Appointment Management System</h1>
+<h1>Hospital Appointment Management System</h1>
 
 ## Anggota Kelompok
 
@@ -39,7 +39,7 @@ AppointMe membantu mempercepat dan mengoptimalkan proses pendaftaran dan manajem
 ## Lampiran *Screenshot*
 ### Pasien
 **1. Login**
-![login3](https://github.com/tsabitamuthia/appointme/assets/97678433/de82fc52-8e1d-4369-a892-263ac6184be3)
+![login](https://github.com/tsabitamuthia/appointme/assets/97678433/b1182a65-6a48-458b-8c1a-668e8622454b)
 
 **3. Daftar Dokter**
 ![dokters](https://github.com/tsabitamuthia/appointme/assets/97678433/357f5ef3-8ece-46fe-b738-1f9a7705eb13)
