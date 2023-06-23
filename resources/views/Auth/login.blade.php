@@ -44,7 +44,6 @@
 
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="images/logo-icon.png" />
-    
         <!-- bootstrap.min css -->
         <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
         <!-- Icon Font Css -->
