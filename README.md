@@ -13,8 +13,7 @@ Nama Website : AppointMe
 AppointMe adalah sebuah website yang dirancang khusus untuk membantu pengguna dalam mengatur dan mengelola antrian pasien di sebuah rumah sakit. Website ini memberikan kemudahan bagi pengguna untuk membuat janji temu dengan dokter secara online, menghindari antrean yang panjang dan waktu yang terbuang. Website ini dirancang untuk dua peran utama, yaitu Admin dan Pasien, dengan fitur-fitur yang disesuaikan untuk masing-masing peran.
 
 ### 1. Role Pasien:
-![beranda](https://github.com/tsabitamuthia/appointme/assets/97678433/6776047f-c77d-4693-9689-7486a12416f6)
-
+![ss beranda](https://github.com/tsabitamuthia/appointme/assets/97678433/13c3e94b-ec3d-45dd-99c5-ac86a1b406eb)
 
 Sebagai pasien di AppointMe, Anda memiliki akses untuk melakukan pendaftaran antrian dokter, melihat daftar dokter, riwayat antrian, dan daftar poli yang tersedia. Berikut adalah fitur-fitur yang tersedia untuk Anda:
 
