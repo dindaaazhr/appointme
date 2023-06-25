@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
             $table->string('alamat');
+            $table->boolean('role');
             $table->timestamps();
         });
     }

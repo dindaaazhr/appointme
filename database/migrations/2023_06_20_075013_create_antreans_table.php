@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedInteger('id_dokter')->length(10);
             $table->foreign('id_dokter')->references('id_dokter')->on('dokters');
             $table->string('status');
-            $table->time('jam_temu');
+            $table->dateTime('jam_temu');
             $table->timestamps();
         });
     }
