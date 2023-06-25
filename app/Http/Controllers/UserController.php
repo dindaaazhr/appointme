@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function register()
     {
-        return view('Auth/register');
+        return view('auth/register');
     }
 
     public function register_action(Request $request)
@@ -24,6 +24,7 @@ class UserController extends Controller
             'tempat_lahir' => 'required',
             'tanggal_lahir' => 'required',
             'alamat' => 'required',
+            'role' => 'required',
             'password_confirm' => 'required|same:password',
         ]);
 
@@ -35,6 +36,7 @@ class UserController extends Controller
             'tempat_lahir' => $request->tempat_lahir,
             'tanggal_lahir' => $request->tanggal_lahir,
             'alamat' => $request->alamat,
+            'role' => $request->role,
         ]);
         $pasien->save();
 
@@ -45,7 +47,7 @@ class UserController extends Controller
 
     public function login()
     {
-        return view('Auth/login');
+        return view('auth/login');
     }
 
     public function login_action(Request $request)
@@ -57,11 +59,11 @@ class UserController extends Controller
         
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             $request->session()->regenerate();
-            if ($request->email === 'adminappointme@health.co.id') {
+            if (Auth::user()->role == '1') {
                 return redirect()->route('dashboard.index');
             }
             return redirect()->route('pasiens.home');
-        }
+        }        
     
         return back()->withErrors([
             'password' => 'Email atau Password salah!',
@@ -72,7 +74,7 @@ class UserController extends Controller
     public function password()
     {
         $data['title'] = 'Change Password';
-        return view('Auth/password', $data);
+        return view('auth/password', $data);
     }
 
     public function password_action(Request $request)

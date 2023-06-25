@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Antrean;
 use App\Models\Dokter;
-use App\Models\pasien;
+use App\Models\Pasien;
 use App\Models\Poli;
 use Illuminate\Http\Request;
 
@@ -15,7 +15,7 @@ class AntreansController extends Controller
         $antreans = Antrean::all();
         $dokters = Dokter::all();
         $polis = Poli::all();
-        $pasiens = pasien::all();
+        $pasiens = Pasien::all();
         return view('pasiens.antrean')->with('antreans', $antreans)->with('dokters', $dokters)->with('polis', $polis)->with('pasiens', $pasiens);
     }
 

@@ -10,10 +10,13 @@ use Illuminate\Http\Request;
 
 class AntreanController extends Controller
 {
-    public function index() {
-        $antreans = Antrean::all();
+    public function index(Request $request) {
         $dokters = Dokter::all();
         $pasiens = Pasien::all();
+        $status = $request->input('status');
+        $antreans = Antrean::when($status, function ($query, $status) {
+            return $query->where('status', $status);
+        })->get();
         return view('antrean.index')->with('antreans', $antreans)->with('dokters', $dokters)->with('pasiens', $pasiens);
     }
 

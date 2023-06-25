@@ -11,7 +11,7 @@ class PasiensController extends Controller
 {
     //
     public function index() {
-        $pasiens = pasien::all();
+        $pasiens = Pasien::all();
         return view('pasiens.profil')->with('pasiens', $pasiens);
     }
 

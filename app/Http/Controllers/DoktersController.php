@@ -8,10 +8,21 @@ use App\Models\Poli;
 
 class DoktersController extends Controller
 {
-    public function index() {
-        $dokters = Dokter::all();
+    public function index(Request $request) {
         $polis = Poli::all();
-        return view('pasiens.doctor')->with('dokters', $dokters)->with('polis', $polis);
+        $dokterSelect = Dokter::query();
+    
+        $poliId = $request->input('poli');
+    
+        if ($poliId) {
+            $dokterSelect->whereHas('polis', function ($query) use ($poliId) {
+                $query->where('id_poli', $poliId);
+            });
+        }
+    
+        $dokters = $dokterSelect->get();
+    
+        return view('pasiens.doctor', compact('dokters', 'polis', 'poliId'));
     }
 
     public function detail($id_poli) {

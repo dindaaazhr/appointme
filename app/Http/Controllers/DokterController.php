@@ -9,15 +9,26 @@ use Illuminate\Http\Request;
 
 class DokterController extends Controller
 {
-    public function index() {
-        $dokters = Dokter::all();
+    public function index(Request $request) {
         $polis = Poli::all();
+        $dokterSelect = Dokter::query();
+    
+        $poliId = $request->input('poli');
+    
+        if ($poliId) {
+            $dokterSelect->whereHas('polis', function ($query) use ($poliId) {
+                $query->where('id_poli', $poliId);
+            });
+        }
+    
+        $dokters = $dokterSelect->get();
+    
         $jumlahAntrean = [];
-        
         foreach ($dokters as $dokter) {
             $jumlahAntrean[$dokter->id_dokter] = $dokter->antreans->count();
         }
-        return view('dokter.index')->with('dokters', $dokters)->with('jumlahAntrean', $jumlahAntrean)->with('polis', $polis);
+    
+        return view('dokter.index', compact('dokters', 'jumlahAntrean', 'polis', 'poliId'));
     }
 
     public function store(Request $request){

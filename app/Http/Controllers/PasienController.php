@@ -23,6 +23,7 @@ class PasienController extends Controller
             'tempat_lahir' => 'required',
             'tanggal_lahir' => 'required|date',
             'alamat' => 'required',
+            'role' => 'required',
         ]);
         $data['password'] = Hash::make($data['password']);
         Pasien::create($data);
@@ -40,6 +41,7 @@ class PasienController extends Controller
         $pasien->tempat_lahir = $request->input('tempat_lahir');
         $pasien->tanggal_lahir = $request->input('tanggal_lahir');
         $pasien->alamat = $request->input('alamat');
+        $pasien->role = $request->input('role');
         $pasien->save();
         return redirect()->route('pasien.index');
     }
