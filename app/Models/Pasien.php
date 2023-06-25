@@ -21,6 +21,7 @@ class pasien extends Model
         'tempat_lahir',
         'tanggal_lahir',
         'alamat',
+        'role',
     ];
     public function polis(){
         return $this->belongsTo(Poli::class, 'id_poli');

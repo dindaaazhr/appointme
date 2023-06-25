@@ -23,5 +23,6 @@ class User extends Authenticatable
         'tempat_lahir',
         'tanggal_lahir',
         'alamat',
+        'role',
     ];
 }
