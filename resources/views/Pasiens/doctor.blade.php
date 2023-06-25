@@ -98,7 +98,7 @@
                         <div class="pagination_link">
                             <a href="{{ route('pasiens.home') }}" class="text-white" >Beranda</a>
                             <span>/</span>
-                            <a href="{{ route('pasiens.doctor') }}" class="text-white-50">All Doctors</a>
+                            <a href="{{ route('pasiens.doctor') }}" class="text-white-50">Semua Dokter</a>
                         </div>
                     </div>
                 </div>
@@ -119,55 +119,43 @@
                     </div>
                 </div>
 
-            <div class="col-12 text-center  mb-5">
-                    <div class="btn-group btn-group-toggle " data-toggle="buttons">
-                    <label class="btn ">
-                        <input type="radio" name="shuffle-filter" value="cat1" />Obgyn
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat2" />Gigi
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat3" />Saraf
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat4" />Pengobatan
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat5" />Anak
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat6" />Penyakit Dalam
-                    </label>
-                    </div>
-            </div>
-
-            <table class="table">
-            <thead>
-                <tr>
-                    <th>ID Dokter</th>
-                    <th>Nama Dokter</th>
-                    <th>Nama Poli</th>
-                    <th>No Hp</th>
-                    <th>Alamat</th>
-                    <th>Jam Buka</th>
-                    <th>Jam Tutup</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($dokters as $dokter)
-                <tr>
-                    <td>{{ $dokter->id_dokter }}</td>
-                    <td>{{ $dokter->nama }}</td>
-                    <td>{{ $dokter->polis ? $dokter->polis->nama : '-' }}</td>
-                    <td>{{ $dokter->no_hp }}</td>
-                    <td>{{ $dokter->alamat }}</td>
-                    <td>{{ $dokter->jam_buka }}</td>
-                    <td>{{ $dokter->jam_tutup }}</td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+				<div class="col-12 text-center mb-6">
+						<div class="col-auto d-flex justify-content-center">
+							@foreach ($polis as $poli)
+							<form action="{{ route('pasiens.doctor') }}" method="GET" class="form-inline" style="float: left;">
+								<input type="hidden" name="poli" value="{{ $poli->id_poli }}">
+								<button type="submit" class="rounded mx-2" style="background-color: #EB0050; color: rgb(251, 248, 248); border: none; border-color: #EB0050; padding: 10px 20px; cursor: pointer;" onmouseover="this.style.backgroundColor='#A81c2d';" >{{ $poli->nama }}</button>
+							</form>
+							@endforeach
+						</div>						
+				</div>
+				<br>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>ID Dokter</th>
+							<th>Nama Dokter</th>
+							<th>Nama Poli</th>
+							<th>No Hp</th>
+							<th>Alamat</th>
+							<th>Jam Buka</th>
+							<th>Jam Tutup</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach ($dokters as $dokter)
+						<tr>
+							<td>{{ $dokter->id_dokter }}</td>
+							<td>{{ $dokter->nama }}</td>
+							<td>{{ $dokter->polis ? $dokter->polis->nama : '-' }}</td>
+							<td>{{ $dokter->no_hp }}</td>
+							<td>{{ $dokter->alamat }}</td>
+							<td>{{ $dokter->jam_buka }}</td>
+							<td>{{ $dokter->jam_tutup }}</td>
+						</tr>
+						@endforeach
+					</tbody>
+				</table>
 
         </section>
         <!-- /portfolio -->

@@ -23,6 +23,17 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahModal">
                 + Dokter
             </button>
+            <form action="{{ route('dokter.index') }}" method="GET" class="form-inline" style="float: right;">
+                <div class="form-group mr-2">
+                    <select name="poli" id="filterPoli" class="form-control">
+                        <option value="">Semua Poli</option>
+                        @foreach($polis as $poli)
+                            <option value="{{ $poli->id_poli }}" {{ request('poli') == $poli->id_poli ? 'selected' : '' }}>{{ $poli->nama }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-dark">Filter</button>
+            </form>
             <table class="table mt-3">
                 <?php $no = 1;?>
                 <thead>

@@ -19,10 +19,16 @@
     <div class="main_container">
         <div class="container">
             <h1>Data Antrean</h1>
-        <br>
+            <br>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahModal">
+                <link rel="shortcut icon" type="image/x-icon" href="images/logo-icon.png" />
                 + Antrean
             </button>
+            <div class="btn-group mb-3" style="float: right;" role="group">
+                <a href="{{ route('antrean.index') }}" class="btn btn-light mr-2 rounded">Semua</a>
+                <a href="{{ route('antrean.index', ['status' => 'Selesai']) }}" class="btn btn-secondary mr-2 rounded">Selesai</a>
+                <a href="{{ route('antrean.index', ['status' => 'Dalam Antrean']) }}" class="btn btn-dark rounded">Dalam Antrean</a>
+            </div>
             <table class="table mt-3">
                 <?php $no = 1;?>
                 <thead>
@@ -101,7 +107,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="jam_temu">Jam Temu</label>
-                                <input type="time" class="form-control" id="jam_temu" name="jam_temu" required>
+                                <input type="datetime-local" class="form-control" id="jam_temu" name="jam_temu" required>
                             </div>
                             <div class=form-group>
                                 <label for="status">Status</label>
@@ -153,7 +159,7 @@
                     </div>               
                     <div class="form-group">
                         <label for="jam_temu{{ $antrean->id_antrean }}">Jam Temu</label>
-                        <input type="time" class="form-control" id="jam_temu{{ $antrean->id_antrean }}" name="jam_temu" value="{{ $antrean->jam_temu }}" required>
+                        <input type="datetime-local" class="form-control" id="jam_temu{{ $antrean->id_antrean }}" name="jam_temu" value="{{ $antrean->jam_temu }}" required>
                     </div>
                     <div class="form-group">
                         <label for="status{{ $antrean->id_antrean }}">Status</label>

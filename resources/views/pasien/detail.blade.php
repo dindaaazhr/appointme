@@ -51,7 +51,7 @@
                         <td>{{ $antrean->id_antrean }}</td>
                         <td>{{ $antrean->pasiens ? $antrean->pasiens->nama : '-' }}</td>
                         <td>{{ $antrean->dokters ? $antrean->dokters->nama : '-' }}</td>
-                        <td>{{ $antrean->polis ? $antrean->polis->nama : '-' }}</td>
+                        <td>{{ $antrean->dokters ? $antrean->dokters->polis->nama : '-' }}</td>
                         <td>{{ $antrean->jam_temu }}</td>
                         <td>{{ $antrean->status }}</td>
                         <td class="d-flex align-items-center">
@@ -59,7 +59,7 @@
                         </td>
                         </tr>
                         @empty
-                        <li>Tidak ada antrean yang tersedia.</li>
+                        <li>Tidak ada pasien yang tersedia.</li>
                     @endforelse
                 </tbody>
             </table>

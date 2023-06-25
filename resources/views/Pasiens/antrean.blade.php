@@ -108,30 +108,6 @@
         <!-- portfolio -->
         <section class="section doctors">
         <div class="container">
-
-            <div class="col-12 text-center  mb-5">
-                    <div class="btn-group btn-group-toggle " data-toggle="buttons">
-                    <label class="btn ">
-                        <input type="radio" name="shuffle-filter" value="cat1" />Kardiologi
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat2" />Gigi
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat3" />Saraf
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat4" />Pengobatan
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat5" />Anak
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat6" />Traumatologi
-                    </label>
-                    </div>
-            </div>
-
             <table class="table">
             <thead>
                 <tr>

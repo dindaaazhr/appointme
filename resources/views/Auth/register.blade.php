@@ -98,6 +98,9 @@
                                     <input class="form-control" type="text" id="alamat" name="alamat" />
                                 </div>
                                 <div class="mb-3">
+                                    <input type="hidden" id="role" name="role" value="0">
+                                </div>
+                                <div class="mb-3">
                                     <label for="email">Email <span class="text-danger">*</span></label>
                                     <input class="form-control" type="email" id="email" name="email" value="{{ old('email') }}" />
                                 </div>

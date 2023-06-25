@@ -56,7 +56,7 @@
                         </td>
                     </tr>
                     @empty
-                        <li>Tidak ada antrean yang tersedia.</li>
+                        <li>Tidak ada Dokter yang tersedia.</li>
                     @endforelse
                 </tbody>
             </table>

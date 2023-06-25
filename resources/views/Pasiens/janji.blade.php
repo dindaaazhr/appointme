@@ -131,7 +131,7 @@
 							<label for="id_dokter">Nama Dokter:</label>
 							<select name="id_dokter" id="idDokterDropdown" class="form-control">
 								@forelse($dokters as $dokter) 
-								<option value="{{ $dokter->id_dokter }}">{{ $dokter->nama }}</option>
+								<option value="{{ $dokter->id_dokter }}">{{ $dokter->nama }} ( {{ $dokter->polis ? $dokter->polis->nama : '-' }} )</option>
 								@empty
 								<option value="">Belum ada Antrean.</option>
 								@endforelse
@@ -147,7 +147,7 @@
 					<div class="col-lg-12">
 						<div class="form-group">
 							<label for="id_pasien">Jam Temu:</label>
-							<input name="jam_temu" id="jam_temu" type="time" class="form-control" placeholder="Jam Temu">
+							<input name="jam_temu" id="jam_temu" type="datetime-local" class="form-control" placeholder="Jam Temu">
 						</div>
 					</div>
 					<input type="hidden" id="status" name="status" value="Dalam Antrean">

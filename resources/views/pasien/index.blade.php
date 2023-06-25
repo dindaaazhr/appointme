@@ -35,6 +35,7 @@
                         <th>Tempat Lahir</th>
                         <th>Tanggal Lahir</th>
                         <th>Alamat</th>
+                        <th>Role</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -52,6 +53,7 @@
                         <td>{{ $pasien->tempat_lahir }}</td>
                         <td>{{ $pasien->tanggal_lahir }}</td>
                         <td>{{ $pasien->alamat }}</td>
+                        <td>{{ $pasien->role == 0 ? 'Pasien' : 'Admin'}}</td>
                         <td class="d-flex align-items-center">
                             <a href="{{ route('pasien.detail', $pasien->id_pasien) }}" class="btn btn-info mr-2">Detail</a>
                         <button type="button" class="btn btn-success btn-edit mr-2" data-toggle="modal" data-target="#editModal{{ $pasien->id_pasien }}">Edit</button>
@@ -112,6 +114,13 @@
                                 <label for="alamat">Alamat</label>
                                 <textarea class="form-control" id="alamat" name="alamat" required></textarea>
                             </div>
+                            <div class="form-group">
+                                <label for="role">Role</label>
+                                <select name="role" id="roleDropdown" class="form-control">
+                                    <option value="0">Pasien</option>
+                                    <option value="1">Admin</option>
+                                </select>                                
+                            </div>
                             <button type="submit" class="btn btn-primary" id="btnSimpan">Simpan</button>
                         </form>
                     </div>
@@ -163,7 +172,14 @@
                     <div class="form-group">
                         <label for="alamat{{ $pasien->id_pasien }}">Alamat</label>
                         <textarea class="form-control" id="alamat{{ $pasien->id_pasien }}" name="alamat" required>{{ $pasien->alamat }}</textarea>
-                    </div>                    
+                    </div>          
+                    <div class="form-group">
+                        <label for="role{{ $pasien->id_pasien }}">Role</label>
+                        <select name="role" id="roleDropdown{{ $pasien->id_pasien }}" class="form-control" value="{{ $pasien->role }}">
+                            <option value="0">Pasien</option>
+                            <option value="1">Admin</option>
+                        </select>                                
+                    </div>          
                     <button type="submit" class="btn btn-primary" id="btnSimpan">Simpan</button>
                 </form>
             </div>
