@@ -59,6 +59,20 @@ AppointMe membantu mempercepat dan mengoptimalkan proses pendaftaran dan manajem
 **2. Detail Pasien**
 ![detail](https://github.com/tsabitamuthia/appointme/assets/97678433/fc386930-dddb-4be9-b2ce-7070d9606d30)
 
+## Lampiran Revisi 
+**1. Jumlah Antrean**
+- Kami telah merevisi jumlah antrean yang sudah dibagi dalam beberapa kelompok, yaitu : Semua, Selesai, dan Dalam antrean. Kelompok ini memiliki jenis antrian sesuai dengan statusnya sehingga admin dapat mengetahui antrian yang masih ada dan yang sudah selesai
+
+**2. Pilihan Poli saat pasien mendaftar**
+- Pasien jarang sekali untuk memilih berdasarkan poli, sehingga pada form dropdown, kami telah menambahkan poli yang dimiliki oleh setiap dokter. Hal ini bertujuan agar pasien dapat mengetahui poli dari setiap dokter yang akan mereka daftar
+
+**3. Link deployr**
+- Kami telah mendeploy web kami menggunakan AWS EC2
+- Link : http://54.164.139.244/login
+- Akun admin
+  Email : adminappointme@health.co.id
+  pw      : 123
+  
 ## Installation
 - `git clone <URL HTTPS Github>`
 - `cd .../appointme`
