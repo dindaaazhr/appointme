@@ -1,3 +1,19 @@
+# Soal Proyek Akhir
+![WhatsApp Image 2023-06-27 at 07 34 41](https://github.com/tsabitamuthia/appointme/assets/97678433/114aa4dd-0127-4167-af9b-490625411b7b)
+
+# Revisi 
+- Role Admin
+1. Memberikan filter pada kolom Status halaman Daftar Antrean untuk Role Admin.
+2. Memberikan filter daftar dokter untuk setiap poli pada halaman Daftar Poli.
+3. Memperbaiki mekanisme hak akses login untuk admin
+- Role Pasien
+1. Menambahkan kolom role pada tabel pasien untuk membedakan Admin dan Pasien.
+2. Memberikan keterangan nama poli untuk setiap dokter pada halaman Buat Janji.
+3. Memperbaiki mekanisme hak akses login untuk pasien.
+- Link Deploy : http://54.164.139.244/
+    - email admin = adminappointme@health.co.id
+    - password    = 123
+
 <h1>Hospital Appointment Management System</h1>
 
 ## Anggota Kelompok
